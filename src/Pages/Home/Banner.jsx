@@ -6,7 +6,7 @@ import '../Home/Home/Banner.css';
 const Banner = () => {
     return (
 
-        <Carousel autoPlay interval={3000} infiniteLoop>
+        <Carousel showThumbs ={false} autoPlay interval={3000} infiniteLoop>
             <div className="slider-item">
                 <img src="https://i.ibb.co/YWvNDGR/pexels-pixabay-163403.jpg" alt="Image 1" />
                 <div className="slider-overlay">

@@ -1,4 +1,5 @@
 import  { useState, useEffect } from 'react';
+import { Container } from 'react-bootstrap';
 
 const PopularClasses = () => {
   const [classes, setClasses] = useState([]);
@@ -18,25 +19,38 @@ const PopularClasses = () => {
     fetchClasses();
   }, []);
 
+  const styles = {
+    background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://i.ibb.co/hfKLdX4/pexels-cottonbro-studio-7792245.jpg")',
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  };
+  
+  
+
   return (
-    <div>
-      <h2>Popular Classes</h2>
+    <div  style={{ ...styles, marginBottom: '-48px', paddingBottom: '70px' }} >
+      <h2 className='text-center 'style={{paddingTop: '70px', paddingBottom: '70px'}}>Popular Classes</h2>
+      <Container>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {classes.map((classData) => (
           <div key={classData._id} className="col">
-            <div className="card h-100">
+            <div className="card h-100 border-0">
               <img src={classData.image} className="card-img-top" alt={classData.name} />
-              <div className="card-body">
+              <div className="card-body bg-black text-white">
                 <h5 className="card-title">{classData.name}</h5>
+                <p className="card-text">Time: {classData.classTimePeriod}</p>
                 <p className="card-text">Enrolled: {classData.enrollmentCount}</p>
                 <p className="card-text">Description: {classData.description}</p>
-                <p className="card-text">Time: {classData.classTimePeriod}</p>
+                
                 {/* Add additional relevant information */}
               </div>
             </div>
           </div>
         ))}
       </div>
+      </Container>
     </div>
   );
 };
