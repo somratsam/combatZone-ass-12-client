@@ -60,7 +60,7 @@ const Footer = () => {
                                 <Form.Label>Let&#39;s Stay Connected</Form.Label>
                                 <Row>
                                     <Col xs={8}>
-                                        <Form.Control type="email" placeholder="Enter your email" />
+                                        <Form.Control  type="email" placeholder="Enter your email" />
                                     </Col>
                                     <Col xs={4}>
                                         <Button variant="outline-info"

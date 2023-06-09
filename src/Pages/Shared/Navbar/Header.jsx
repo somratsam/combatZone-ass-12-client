@@ -33,6 +33,11 @@ const Header = () => {
                                 Dashboard
                             </Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/login" className="nav-link text-light">
+                                Login
+                            </Link>
+                        </li>
                     </ul>
                     
                     <Link to="/get-started" className="btn btn-primary">
