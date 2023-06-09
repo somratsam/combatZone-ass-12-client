@@ -52,7 +52,7 @@ const ClientsFeedback = () => {
                             alt=""
                         />
                     </div>
-                    <Roll left duration ={3000}>
+                    <Roll left duration ={2000}>
                                 <h3 className="pt-5">{feedback.name}</h3>
                                 <p className="pb-3 text-danger fw-semibold">{feedback.title}</p>
                                 <p className="p-5 opacity-75">{feedback.feedback}</p>

@@ -11,7 +11,7 @@ const Banner = () => {
             <div className="slider-item">
                 <img src="https://i.ibb.co/YWvNDGR/pexels-pixabay-163403.jpg" alt="Image 1" />
                 <div className="slider-overlay">
-                    <Rotate top left duration={3000}>
+                    <Rotate top left duration={2000}>
                         <h3 className="display-3">EVERY GREAT <br />
                             JOURNEY STARTS WITH <br />
                             ONE STEP!
