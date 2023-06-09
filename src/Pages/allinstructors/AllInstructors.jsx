@@ -47,10 +47,11 @@ const AllInstructors = () => {
             <Col key={instructor._id}>
               <Card className='border-0'>
                 <Card.Img variant="top" src={instructor.image} alt={instructor.name} style={{ width: '100%', height: '300px', objectFit: 'cover' }} />
-                <Card.Body className='text-center text-white' style={{ backgroundColor: '#191825' }}>
+                <Card.Body className='text-center text-white' style={{ backgroundColor: '#13182a' }}>
                   <Card.Title>{instructor.name}</Card.Title>
                   <Card.Text>Number of Students: {instructor.enrollmentCount}</Card.Text>
                   <Card.Text className='text-danger text-uppercase'>{instructor.martialArts} Instructor</Card.Text>
+                  <Card.Text>{instructor.email}</Card.Text>
                  
                   <div className=''>
                     <Card.Link href={instructor.socialLinks.facebook} target="_blank" className='text-white opacity-75'>

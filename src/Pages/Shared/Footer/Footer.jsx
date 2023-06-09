@@ -5,12 +5,13 @@ import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 const Footer = () => {
 
     const styles = {
-        background: 'linear-gradient(rgba(25, 24, 37, 0.9), rgba(25, 24, 37, 0.9)), url("https://i.ibb.co/MMB4Qgj/man-5612736-1280.jpg")',
+        background: 'linear-gradient(rgba(19, 24, 42, 0.9), rgba(19, 24, 42, 0.9)), url("https://i.ibb.co/MMB4Qgj/man-5612736-1280.jpg")',
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       };
+      
       
 
     return (

@@ -38,7 +38,7 @@ const PopularClasses = () => {
           <div key={classData._id} className="col">
             <div className="card h-100 border-0">
               <img src={classData.image} className="card-img-top" alt={classData.name} />
-              <div className="card-body text-white text-center" style={{backgroundColor: '#191825'}}>
+              <div className="card-body text-white text-center" style={{backgroundColor: '#13182a'}}>
                 <h5 className="card-title">{classData.name}</h5>
                 <p className="card-text text-danger">Time: {classData.classTimePeriod}</p>
                 <p className="card-text">Enrolled: {classData.enrollmentCount}</p>

@@ -32,7 +32,7 @@ const ClientsFeedback = () => {
     
 
     return (
-        <div  style={{backgroundColor: '#191825', marginBottom: '-20px', paddingBottom: '20px'}}>
+        <div  style={{backgroundColor: '#13182a', marginBottom: '-20px', paddingBottom: '20px'}}>
 
             <Container>
             <h1 className='text-center text-white pb-5' style={{paddingTop: '150px'}}>WHAT CLIENTS SAY</h1>
