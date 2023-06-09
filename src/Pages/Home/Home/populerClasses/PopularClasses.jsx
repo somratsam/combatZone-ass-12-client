@@ -31,18 +31,18 @@ const PopularClasses = () => {
 
   return (
     <div  style={{ ...styles, marginBottom: '-48px', paddingBottom: '70px' }} >
-      <h2 className='text-center 'style={{paddingTop: '70px', paddingBottom: '70px'}}>Popular Classes</h2>
+      <h1 className='text-center fw-semibold text-white 'style={{paddingTop: '130px', paddingBottom: '50px'}}>POPULAR CLASSES</h1>
       <Container>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {classes.map((classData) => (
           <div key={classData._id} className="col">
             <div className="card h-100 border-0">
               <img src={classData.image} className="card-img-top" alt={classData.name} />
-              <div className="card-body bg-black text-white">
+              <div className="card-body text-white text-center" style={{backgroundColor: '#191825'}}>
                 <h5 className="card-title">{classData.name}</h5>
-                <p className="card-text">Time: {classData.classTimePeriod}</p>
+                <p className="card-text text-danger">Time: {classData.classTimePeriod}</p>
                 <p className="card-text">Enrolled: {classData.enrollmentCount}</p>
-                <p className="card-text">Description: {classData.description}</p>
+                <p className="card-text text-light-emphasis">{classData.description}</p>
                 
                 {/* Add additional relevant information */}
               </div>

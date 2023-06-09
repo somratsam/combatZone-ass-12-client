@@ -38,15 +38,16 @@
  
   
   @media (max-width: 767px) {
-    .slider-overlay h2 {
+    .slider-overlay h3 {
       font-size: 20px;
     }
   
-    .slider-overlay button {
-      font-size: 16px;
+    .slider-overlay Button {
+      font-size: 10px;
     }
   
     .slider-item img {
+       
       height: 300px;
     }
   }

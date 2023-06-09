@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="mt-5  text-white" style={{ backgroundColor: "#000000" }}>
+        <footer className="mt-5  text-white" style={{ backgroundColor: "#191825" }}>
             <Container className='mx-auto w-100'>
                 <Row className='pt-4'>
                     <Col md={4} sm={6}>
