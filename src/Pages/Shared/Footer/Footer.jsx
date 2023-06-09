@@ -3,8 +3,18 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
+
+    const styles = {
+        background: 'linear-gradient(rgba(25, 24, 37, 0.9), rgba(25, 24, 37, 0.9)), url("https://i.ibb.co/MMB4Qgj/man-5612736-1280.jpg")',
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      };
+      
+
     return (
-        <footer className="mt-5  text-white" style={{ backgroundColor: "#191825" }}>
+        <footer className="mt-5  text-white" style={styles}>
             <Container className='mx-auto w-100'>
                 <Row className='pt-4'>
                     <Col md={4} sm={6}>

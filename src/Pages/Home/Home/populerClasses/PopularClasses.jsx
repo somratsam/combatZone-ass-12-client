@@ -30,7 +30,7 @@ const PopularClasses = () => {
   
 
   return (
-    <div  style={{ ...styles, marginBottom: '-48px', paddingBottom: '70px' }} >
+    <div  style={{ ...styles, marginBottom: '-48px', paddingBottom: '200px' }} >
       <h1 className='text-center fw-semibold text-white 'style={{paddingTop: '130px', paddingBottom: '50px'}}>POPULAR CLASSES</h1>
       <Container>
       <div className="row row-cols-1 row-cols-md-3 g-4">
