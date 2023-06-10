@@ -1,0 +1,17 @@
+/* Header.css */
+
+.navbar-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    backdrop-filter: blur(10px); /* Add backdrop-filter for opacity effect */
+    z-index: 10;
+    transition: top 0.3s;
+    
+  }
+  
+  .navbar-hidden {
+    top: -100px; /* Adjust this value to change the amount of hiding */
+  }
+  

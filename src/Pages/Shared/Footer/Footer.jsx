@@ -15,7 +15,7 @@ const Footer = () => {
       
 
     return (
-        <footer className="mt-5  text-white" style={styles}>
+        <footer className="mt-5  text-white" style={{...styles,  marginBottom: '-30px'}}>
             <Container className='mx-auto w-100'>
                 <Row className='pt-4'>
                     <Col md={4} sm={6}>
