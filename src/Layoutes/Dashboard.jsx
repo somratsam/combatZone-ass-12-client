@@ -1,10 +1,10 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet} from 'react-router-dom';
 
 const Dashboard = () => {
 // todo
     
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={{marginTop: '100px'}}>
       <div className="row">
         {/* Left Sidebar */}
         <div className="col-md-4">
@@ -13,10 +13,10 @@ const Dashboard = () => {
             <h4>Instructor Dashboard</h4>
             <ul>
               <li>
-                <Link to="/addClass">ADD class</Link>
+                <Link to="/dashboard/addClass">ADD class</Link>
               </li>
               <li>
-                <Link to="/myClass">My Class</Link>
+                <Link to="/dashboard/myClass">My Class</Link>
               </li>
             </ul>
           </div>
@@ -28,7 +28,7 @@ const Dashboard = () => {
                 <Link to="/student-dashboard">Student Dashboard</Link>
               </li>
               <li>
-                <Link to="/my-selected-class">My Selected Class</Link>
+                <Link to="/dashboard/selectedClass">My Selected Class</Link>
               </li>
               <li>
                 <Link to="/enrolled-class">Enrolled Class</Link>
@@ -39,11 +39,9 @@ const Dashboard = () => {
             {/* Admin Section */}
             <h4>Admin</h4>
             <ul>
+              
               <li>
-                <Link to="/admin-dashboard">Admin Dashboard</Link>
-              </li>
-              <li>
-                <Link to="/manage-class">Manage Class</Link>
+                <Link to="/dashboard/manageClass">Manage Class</Link>
               </li>
               <li>
                 <Link to="/manage-users">Manage Users</Link>
