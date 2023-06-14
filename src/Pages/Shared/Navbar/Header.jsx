@@ -1,15 +1,22 @@
-import React, { useContext, useState, useEffect } from 'react';
+import  { useContext, useState, useEffect } from 'react';
 import { Button, Container, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProviders';
 import { FaUserCircle } from 'react-icons/fa';
 
 import './Header.css'; // Import the CSS file for styling
+import useAdmin from '../UseAdmin';
+import useInstructor from '../UseInstructor';
+import useStudent from '../useStudent';
 
 const Header = () => {
   const { user, logout } = useContext(AuthContext);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const isAdmin = useAdmin();
+  const isInstructor = useInstructor();
+  
+  const isStudent = useStudent();
 
   const handleLogout = () => {
     logout()
@@ -67,9 +74,23 @@ const Header = () => {
                 Classes
               </Link>
             </li>
-            {user && (
+            {user && isStudent && (
               <li className="nav-item">
-                <Link to="/dashboard" className="nav-link text-light">
+                <Link to="/dashboard/selectedClass" className="nav-link text-light">
+                  Dashboard
+                </Link>
+              </li>
+            )}
+            {user && isInstructor && (
+              <li className="nav-item">
+                <Link to="/dashboard/addClass" className="nav-link text-light">
+                  Dashboard
+                </Link>
+              </li>
+            )}
+            {user && isAdmin && (
+              <li className="nav-item">
+                <Link to="/dashboard/manageClass" className="nav-link text-light">
                   Dashboard
                 </Link>
               </li>

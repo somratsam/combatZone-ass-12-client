@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
-import { AuthContext } from '../../AuthProviders';
 import { Container } from 'react-bootstrap';
+import { AuthContext } from '../../AuthProviders';
 
 const ClassesList = () => {
   const [classes, setClasses] = useState([]);
@@ -12,6 +12,7 @@ const ClassesList = () => {
       try {
         const response = await axios.get(`http://localhost:5000/myClasses?email=${user?.email}`);
         setClasses(response.data);
+        console.log(response.data);
       } catch (error) {
         // Handle the error if needed
       }

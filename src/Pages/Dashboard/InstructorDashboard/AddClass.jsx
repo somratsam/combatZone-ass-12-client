@@ -34,6 +34,7 @@ const AddClass = () => {
       status: 'pending',
       instructorName: instructor.displayName,
       instructorEmail: instructor.email
+      
     };
   
     try {

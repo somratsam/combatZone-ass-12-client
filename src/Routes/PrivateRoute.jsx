@@ -18,6 +18,8 @@ const PrivateRoute = ({ children }) => {
       replace
       state={{ from: location.pathname }}
     />
+
+    
   );
 };
 

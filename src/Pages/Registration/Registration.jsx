@@ -4,7 +4,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { app } from '../../firebase/firebase.config';
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
+import {  createUserWithEmailAndPassword, getAuth,  updateProfile } from 'firebase/auth';
 import { AuthContext } from '../AuthProviders';
 
 const Registration = () => {
@@ -29,17 +29,22 @@ const Registration = () => {
 
     const handleGoogleSignIn = () => {
         signInWithGoogle()
-            .then((result) => {
-                const user = result.user;
-                setUserAndName(user, user.displayName);
-                setUserAndPhoto(user, user.photoURL);
-               
-                navigate(from, { replace: true })
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
+          .then((result) => {
+            const user = result.user;
+            setUserAndName(user, user.displayName);
+            
+            // Check if the user has a photoURL and update the user's photo
+            if (user.photoURL) {
+              setUserAndPhoto(user, user.photoURL);
+            }
+            
+            navigate(from, { replace: true });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      };
+      
 
 
     const handleSubmit = (event) => {
@@ -100,7 +105,7 @@ const Registration = () => {
                                         showConfirmButton: false,
                                         timer: 1500,
                                     }).then(() => {
-                                        navigate('/');
+                                        navigate(from, { replace: true })
                                     });
                                 }
                             })

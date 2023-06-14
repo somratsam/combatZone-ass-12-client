@@ -51,44 +51,50 @@ const Login = () => {
     };
     const handleGoogleLogin = () => {
         signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                const user = result.user;
-                setUserAndName(user, user.displayName);
-                setUserAndPhoto(user, user.photoURL);
-                setErrorMessage('');
-    
-                fetch('http://localhost:5000/users', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({  name: user.displayName, email: user.email, photo: user.photoURL }),
-                })
-                    .then((response) => response.json())
-                    .then((data) => {
-                        if (data.error) {
-                            setErrorMessage(data.error);
-                        } else {
-                            setErrorMessage('');
-                            Swal.fire({
-                                position: 'center',
-                                icon: 'success',
-                                title: 'Login Successful',
-                                showConfirmButton: false,
-                                timer: 1500,
-                            }).then(() => {
-                                navigate(from, { replace: true });
-                            });
-                        }
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    });
+          .then((result) => {
+            const user = result.user;
+            setUserAndName(user, user.displayName);
+            
+            // Check if the user has a photoURL and update the user's photo
+            if (user.photoURL) {
+              setUserAndPhoto(user, user.photoURL);
+            }
+            
+            setErrorMessage('');
+            
+            fetch('http://localhost:5000/users', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ name: user.displayName, email: user.email, photo: user.photoURL }),
             })
-            .catch((error) => {
+              .then((response) => response.json())
+              .then((data) => {
+                if (data.error) {
+                  setErrorMessage(data.error);
+                } else {
+                  setErrorMessage('');
+                  Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Login Successful',
+                    showConfirmButton: false,
+                    timer: 1500,
+                  }).then(() => {
+                    navigate(from, { replace: true });
+                  });
+                }
+              })
+              .catch((error) => {
                 console.log(error);
-            });
-    };
+              });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      };
+      
     
 
 
