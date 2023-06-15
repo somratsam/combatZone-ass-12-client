@@ -60,7 +60,7 @@ const Classes = () => {
             // Disable the select button
             return;
         }
-        console.log("User Role:", user.role);
+       
         try {
             const cartItem = {
                 classId: classData._id,

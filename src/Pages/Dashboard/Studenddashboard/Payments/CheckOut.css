@@ -1,0 +1,29 @@
+/* CheckOut.css */
+
+.card-element {
+    margin-bottom: 1rem;
+  }
+  
+  .pay-button {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pay-button:hover {
+    background-color: #218838;
+    border-color: #218838;
+  }
+  
+  .error-message {
+    color: #9e2146;
+    margin-top: 1rem;
+  }
+  
+  .success-message {
+    color: #28a745;
+    margin-top: 1rem;
+  }
+  
