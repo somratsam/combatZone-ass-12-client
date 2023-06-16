@@ -83,14 +83,19 @@ const CheckOut = ({ price, selectedClasses }) => {
         status: 'service pending',
         item: selectedClasses.map(item => item.name),
       };
+      
 
       axiosSecure.post('/payments', payment)
         .then(res => {
           console.log(res.data);
-          if (res.data.result.insertedId) {
+          if (res.data.insertedId) {
             // Handle success
           }
         });
+
+
+
+
     }
   };
 

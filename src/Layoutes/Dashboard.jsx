@@ -8,17 +8,19 @@ import useStudent from '../Pages/Shared/useStudent';
 const Dashboard = () => {
   const isAdmin = useAdmin();
   const isInstructor = useInstructor();
-  
+
   const isStudent = useStudent();
 
 
   return (
     <div>
       <Header></Header>
-      <div className="container-fluid" style={{ marginTop: '100px' }}>
+      <div className="container-fluid" style={{  backgroundColor: "#13182a" }}>
         <div className="row">
           {/* Left Sidebar */}
-          <div className="col-md-4">
+          <div className="col-md-3" 
+          ><div style={{ position: 'sticky', top: '100px' }}>
+            
             {isInstructor && (
               <div>
                 {/* Instructor Section */}
@@ -41,10 +43,10 @@ const Dashboard = () => {
                   <Link to="/dashboard/selectedClass">My Selected Class</Link>
                 </li>
                 <li>
-                  <Link to="/enrolled-class">Enrolled Class</Link>
+                  <Link to="/dashboard/enrolledClass">Enrolled Class</Link>
                 </li>
                 <li>
-                  <Link to="/dashboard/payment">Payment</Link>
+                  <Link to="/dashboard/paymentHistory">Payment History</Link>
                 </li>
               </ul>
             </div>)}
@@ -63,9 +65,10 @@ const Dashboard = () => {
               </div>
             )}
           </div>
+          </div>
 
           {/* Content */}
-          <div className="col-md-8">
+          <div className="col-md-9">
             {/* Render the content component provided by the separate route handling component */}
             <Outlet></Outlet>
           </div>

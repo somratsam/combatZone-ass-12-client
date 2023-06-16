@@ -1,14 +1,15 @@
 import { Container, Table, Button } from "react-bootstrap";
-import axios from "axios";
+
 import { Link } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import useFetchSelectedClasses from "../../Shared/useFetchSelectedClasses ";
+import useAxiosSecure from "../../Shared/useAxiosSecure";
 
 const SelectedClasses = () => {
   const { selectedClasses, setSelectedClasses } = useFetchSelectedClasses();
   const [totalPrice, setTotalPrice] = useState(0);
-  
+  const [axiosSecure] = useAxiosSecure();
 
   useEffect(() => {
     // Calculate the total price when the selected classes change
@@ -24,7 +25,7 @@ const SelectedClasses = () => {
   const handleDeleteClass = async (classId) => {
     try {
       // Delete the selected class from the backend API
-      await axios.delete(`http://localhost:5000/selectedClasses/${classId}`);
+      await axiosSecure.delete(`http://localhost:5000/selectedClasses/${classId}`);
 
       // Remove the deleted class from the local state
       setSelectedClasses((prevSelectedClasses) =>
