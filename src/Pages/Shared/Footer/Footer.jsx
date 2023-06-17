@@ -63,8 +63,7 @@ const Footer = () => {
                                         <Form.Control  type="email" placeholder="Enter your email" />
                                     </Col>
                                     <Col xs={4}>
-                                        <Button variant="outline-info"
-                                            className="rounded-5 text-light border-0"
+                                        <Button variant="outline-danger text-white border-0 border-bottom mx-2"
                                             type="submit">Subscribe</Button>
                                     </Col>
                                 </Row>

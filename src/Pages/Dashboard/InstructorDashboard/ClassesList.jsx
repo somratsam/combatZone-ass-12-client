@@ -38,7 +38,7 @@ const ClassesList = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" style={{paddingTop: '100px', paddingBottom: '30px'}}>
      <Container>
      <h2>My Classes</h2>
       {classes.length > 0 ? (

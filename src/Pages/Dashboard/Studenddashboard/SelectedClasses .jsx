@@ -37,13 +37,19 @@ const SelectedClasses = () => {
   };
 
   return (
-    <div className="style" style={{ marginBottom: "-48px", paddingBottom: "200px" }}>
-      <h1 className="text-center fw-semibold text-white" style={{ paddingTop: "130px", paddingBottom: "50px" }}>
+    <div className="" style={{ marginBottom: "-48px", paddingBottom: "200px" }}>
+      <h1 className="text-center fw-semibold text-white" style={{ paddingTop: "30px", paddingBottom: "50px" }}>
         My Selected Classes
       </h1>
       <Container>
+      <p className="text-center">Total Price: {totalPrice}</p>
+            <div className="text-center mb-3">
+              <Link to="/dashboard/payment">
+                <Button variant="outline-primary">Pay</Button>
+              </Link>
+            </div>
         {selectedClasses.length === 0 ? (
-          <p className="text-center text-white">You haven't booked any classes yet.</p>
+          <p className="text-center text-white">You haven&#39;t booked any classes yet.</p>
         ) : (
           <>
             <Table striped bordered hover responsive>
@@ -67,6 +73,7 @@ const SelectedClasses = () => {
                     <td>{classData.instructorName}</td>
                     <td>{classData.classTimePeriod}</td>
                     <td>{classData.price}</td>
+                    
                     <td>
                       <Button variant="outline-danger" className="mr-2" onClick={() => handleDeleteClass(classData._id)}>
                         Delete
@@ -76,12 +83,7 @@ const SelectedClasses = () => {
                 ))}
               </tbody>
             </Table>
-            <p className="text-center text-white">Total Price: {totalPrice}</p>
-            <div className="text-center">
-              <Link to="/dashboard/payment">
-                <Button variant="outline-primary">Pay</Button>
-              </Link>
-            </div>
+            
           </>
         )}
       </Container>

@@ -1,26 +1,23 @@
 
-
+import useAuth from '../Pages/Shared/useAuth';
 import { Navigate, useLocation } from 'react-router-dom';
-import { AuthContext } from '../Pages/AuthProviders';
-import { useContext } from 'react';
 
-const PrivateRoute = ({ children }) => {
-  const { user } = useContext(AuthContext);
-  const location = useLocation();
+const PrivateRoute = ({children}) => {
 
-  if (user?.email) {
+const {user} = useAuth()
+
+const location = useLocation()
+if (user?.email) {
     return children;
   }
 
-  return (
-    <Navigate
-      to="/login"
-      replace
-      state={{ from: location.pathname }}
-    />
-
-    
-  );
+    return (
+        <Navigate
+          to="/login"
+          replace
+          state={{ from: location.pathname }}
+        />
+      );
 };
 
 export default PrivateRoute;

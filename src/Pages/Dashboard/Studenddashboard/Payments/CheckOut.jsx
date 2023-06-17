@@ -100,7 +100,8 @@ const CheckOut = ({ price, selectedClasses }) => {
   };
 
   return (
-    <Container className="w-75">
+    <Container className="w-75" style={{paddingTop: '120px', paddingBottom: '90px'}}>
+        <h2 className="my-5">Payment</h2>
       <form onSubmit={handleSubmit}>
         <div className="card-element">
           <CardElement

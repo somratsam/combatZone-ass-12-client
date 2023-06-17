@@ -98,7 +98,7 @@ const ManageClass = () => {
 
 
   return (
-    <div className="style" style={{ marginBottom: '-48px', paddingBottom: '200px' }}>
+    <div className="style" style={{  paddingBottom: '50px' }}>
       <h1 className="text-center fw-semibold text-white" style={{ paddingTop: '130px', paddingBottom: '50px' }}>
         MANAGE CLASSES
       </h1>
@@ -119,7 +119,7 @@ const ManageClass = () => {
                     <div className="d-flex justify-content-center">
                       <Button variant="outline-success my-3 text-white border-0 border-bottom mx-2" onClick={() => handleApprove(classData._id)}>Approve</Button>
                       <Button variant="outline-danger my-3 text-white border-0 border-bottom mx-2" onClick={() => handleDeny(classData._id)}>Deny</Button>
-                      <Button variant="outline-primary my-3 text-white border-0 border-bottom mx-2" onClick={() => handleOpenFeedbackModal(classData._id)}>Send Feedback</Button>
+                      <Button variant="outline-primary my-3 text-white border-0 border-bottom mx-2" onClick={() => handleOpenFeedbackModal(classData._id)}>Send Feedback </Button>
                     </div>
                   )}
 

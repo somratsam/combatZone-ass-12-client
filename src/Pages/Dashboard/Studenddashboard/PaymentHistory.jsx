@@ -31,7 +31,7 @@ const PaymentHistory = () => {
   }, [axiosSecure, user]);
 
   return (
-    <div>
+    <div style={{paddingTop: '100px', paddingBottom: '30px'}}>
       <h1>Payment History</h1>
       <Table striped bordered hover>
         <thead>

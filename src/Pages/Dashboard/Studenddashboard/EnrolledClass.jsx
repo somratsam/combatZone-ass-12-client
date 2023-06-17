@@ -31,25 +31,27 @@ const EnrolledClasses = () => {
   }, [axiosSecure, user]);
 
   return (
-    <div>
+    <div style={{paddingTop: '100px', paddingBottom: '30px'}}>
       <h1>Enrolled Classes</h1>
       <Table striped bordered hover>
         <thead>
           <tr>
+            <th>Class Image</th>
             <th>Class Name</th>
             <th>Instructor</th>
-            <th>Status</th>
-            <th>Description</th>
+            
             {/* Add more table headers for additional class properties */}
           </tr>
         </thead>
         <tbody>
           {enrolledClasses.map((classData) => (
             <tr key={classData._id}>
+              <td>
+              <img className="rounded-circle" src={classData.classImage} alt={classData.name} width="90" />
+              </td>
               <td>{classData.className}</td>
               <td>{classData.instructorName}</td>
-              <td>{classData.status}</td>
-              <td>{classData.description}</td>
+             
               {/* Add more table cells for additional class properties */}
             </tr>
           ))}

@@ -15,11 +15,11 @@ const Dashboard = () => {
   return (
     <div>
       <Header></Header>
-      <div className="container-fluid" style={{  backgroundColor: "#13182a" }}>
+      <div className="container-fluid" style={{  marginBottom: '-50px' }} >
         <div className="row">
           {/* Left Sidebar */}
-          <div className="col-md-3" 
-          ><div style={{ position: 'sticky', top: '100px' }}>
+          <div className="col-md-3" style={{  backgroundColor: "#13182a" }}
+          ><div className='text-white' style={{ position: 'sticky', top: '100px' }}>
             
             {isInstructor && (
               <div>

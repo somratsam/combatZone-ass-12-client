@@ -55,7 +55,7 @@ const AddClass = () => {
   
 
   return (
-    <div className="container">
+    <div className="container" style={{paddingTop: '100px', paddingBottom: '30px'}}>
       <h2>Add Class</h2>
       <Form onSubmit={handleAddClass}>
         <Form.Group controlId="instructorName">

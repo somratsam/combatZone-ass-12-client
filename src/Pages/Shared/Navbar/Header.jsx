@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProviders';
 import { FaUserCircle } from 'react-icons/fa';
 
-import './Header.css'; // Import the CSS file for styling
+import './Header.css';
 import useAdmin from '../UseAdmin';
 import useInstructor from '../UseInstructor';
 import useStudent from '../useStudent';
@@ -53,7 +53,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand className="text-light">
           <Link to="/" className="navbar-brand text-light">
-            PIXEL PERFECT
+            COMBAT ZONE
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarNav" />
@@ -118,20 +118,17 @@ const Header = () => {
               )}
 
               {user ? (
-                <Button variant="border-0 text-light" onClick={handleLogout}>
+                <Button variant="outline-danger border-0 border-bottom mx-2 text-light" onClick={handleLogout}>
                   Logout
                 </Button>
               ) : (
                 <Link to="/login">
-                  <Button variant="border-0 text-light pr-4">Login</Button>
+                  <Button variant="outline-danger border-0 border-bottom mx-2 text-light">Login</Button>
                 </Link>
               )}
             </li>
           </ul>
-
-          <Link to="/get-started" className="btn btn-primary">
-            Get Started
-          </Link>
+          <Button variant="outline-danger border-0 border-bottom mx-2 text-light">Get Started</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
