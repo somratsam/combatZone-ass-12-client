@@ -14,7 +14,7 @@ const ClassesList = () => {
         setClasses(response.data);
         console.log(response.data);
       } catch (error) {
-        // Handle the error if needed
+        // Handle the error
       }
     };
 
@@ -33,7 +33,7 @@ const ClassesList = () => {
         )
       );
     } catch (error) {
-      // Handle the error if needed
+      // Handle the error 
     }
   };
 

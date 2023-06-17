@@ -7,6 +7,8 @@ const PrivateRoute = ({children}) => {
 const {user} = useAuth()
 
 const location = useLocation()
+
+
 if (user?.email) {
     return children;
   }

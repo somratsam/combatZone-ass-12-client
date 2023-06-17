@@ -10,7 +10,7 @@ const AddClass = () => {
   const [price, setPrice] = useState('');
   const { user } = useContext(AuthContext);
 
-  // Mocked instructor data for demonstration
+  
   const instructor = {
     displayName: user?.displayName || '',
     email: user?.email || ''
@@ -38,18 +38,18 @@ const AddClass = () => {
     };
   
     try {
-      // Send a POST request to the backend server
+     
       const response = await axios.post('http://localhost:5000/classes', classData);
   
-      // Handle the response if needed
+      
       console.log('Class added successfully:', response.data);
-      // Clear the form fields
+      
       setClassName('');
       setClassImage('');
       setAvailableSeats('');
       setPrice('');
     } catch (error) {
-      // Handle the error if needed
+      // Handle the error 
     }
   };
   
