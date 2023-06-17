@@ -19,25 +19,34 @@ const Footer = () => {
             <Container className='mx-auto w-100'>
                 <Row className='pt-4'>
                     <Col md={4} sm={6}>
-                        <img src="https://i.ibb.co/xhM0hzM/0-0-removebg-preview.png" alt="" style={{ height: '40px', width: '40px' }} />
-                        <span className="fw-bold" style={{ color: '#FF5722' }}>
-                            Wonder Toy
-                        </span>
+                       
+                        <h2 className="fw-bold text-danger mb-4" >
+                            COMBAT ZONE
+                        </h2>
                         <p className='text-start'>
-                            <small>Action Figures: Immerse yourself in a world of adventure with our extensive collection of action figures. These highly detailed and poseable toys bring your favorite characters from movies, TV shows, comics, and video games to life</small>
+                            Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.
                         </p>
                     </Col>
                     <Col md={4} sm={6}>
-                        <h3>Contact Us</h3>
-                        <p>
-                            <strong>Email:</strong> <small>somratsam2@gmail.com</small> <br />
-                            <strong>Phone:</strong> <small>+968 93876228</small> <br />
-                            <strong>Address:</strong> <small>23 Main Street, California, USA</small>
-                        </p>
+                    <h2 className='fw-bold mb-4'>Recent posts</h2>
+                    <div style={{ lineHeight: '.5' }}>
+                    <p>Iain Aber Karate Seminar in Los Angeles</p>
+                    <strong className='text-danger '>MAY 11, 2023</strong>
+                    </div>
+                   <div className='my-4' style={{ lineHeight: '.5' }}>
+                   <p>Knee Pain in Martial Arts: Causes and Remedies</p>
+                    <strong className='text-danger'>JUNE 7, 2023</strong>
+                   </div>
+                       <div style={{ lineHeight: '.5' }}>
+                       <p>somratsam2@gmail.com</p>
+                       <p>+968 93876228</p>
+                       <p> 23 Main Street, California, USA</p>
+                       </div>
+                        
 
                     </Col>
                     <Col md={4} sm={12}>
-                        <h3>Follow Us</h3>
+                        <h2 className='text-danger fw-bold'>Follow Us</h2>
                         <ul className="social-icons d-flex  gap-3 list-unstyled">
                             <li>
                                 <a className='text-decoration-none' href="https://www.facebook.com/profile.php?id=100004894309114" target="_blank" rel="noopener noreferrer">
@@ -57,7 +66,7 @@ const Footer = () => {
                         </ul>
                         <Form>
                             <Form.Group controlId="formEmail">
-                                <Form.Label>Let&#39;s Stay Connected</Form.Label>
+                                <h3>Subscribe Now</h3>
                                 <Row>
                                     <Col xs={8}>
                                         <Form.Control  type="email" placeholder="Enter your email" />
@@ -73,7 +82,7 @@ const Footer = () => {
                     </Col>
                 </Row>
                 <p className="text-center py-4">
-                    Copyright &copy; 2023 Wonder Toy. All rights reserved.
+                    Copyright &copy; 2023 Combat Zone. All rights reserved.
                 </p>
             </Container>
         </footer>
