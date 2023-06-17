@@ -5,11 +5,6 @@ import '../../../Shared/Style.css'
 
 const PopularClasses = () => {
   const classes = useFetchClasses();
-
-
-  
-  
-
   return (
     <div className='style' style={{ marginBottom: '-48px', paddingBottom: '200px' }} >
       <h1 className='text-center fw-semibold text-white 'style={{paddingTop: '130px', paddingBottom: '50px'}}>POPULAR CLASSES</h1>
@@ -22,10 +17,8 @@ const PopularClasses = () => {
               <div className="card-body text-white text-center" style={{backgroundColor: '#13182a'}}>
                 <h5 className="card-title">{classData.className}</h5>
                 <p className="card-text text-danger">Time: {classData.classTimePeriod}</p>
-                <p className="card-text">Enrolled: {classData.enrollmentCount}</p>
+                <p className="card-text">Enrolled: {classData.enrolledCount}</p>
                 <p className="card-text text-light-emphasis">{classData.description}</p>
-                
-                {/* Add additional relevant information */}
               </div>
             </div>
           </div>

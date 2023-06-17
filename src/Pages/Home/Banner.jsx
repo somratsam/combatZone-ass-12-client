@@ -3,6 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Button } from 'react-bootstrap';
 import '../Home/Home/Banner.css';
+import { Bounce, Slide } from 'react-awesome-reveal';
 
 
 const Banner = () => {
@@ -10,17 +11,21 @@ const Banner = () => {
         <Carousel showThumbs={false} autoPlay interval={3000} infiniteLoop>
             <div className="slider-item">
                 <img src="https://i.ibb.co/YWvNDGR/pexels-pixabay-163403.jpg" alt="Image 1" />
-                <div className="slider-overlay">
+                <div  className="slider-overlay">
                     
+                        <Slide>
                         <h3 className="display-3">EVERY GREAT <br />
                             JOURNEY STARTS WITH <br />
                             ONE STEP!
                         </h3>
                     
-                    <Button variant="outline-danger my-3 text-white border-0 border-bottom">
+                        </Slide>
+                   <Bounce>
+                   <Button variant="outline-danger my-3 text-white border-0 border-bottom">
                         GET A FREE LESSON
                     </Button>
-                </div>
+                   </Bounce>
+                </div >
             </div>
             <div className="slider-item">
                 <img src="https://i.ibb.co/GCBh3vb/two-professional-boxer-boxing-black-smoky.jpg" alt="Image 2" />

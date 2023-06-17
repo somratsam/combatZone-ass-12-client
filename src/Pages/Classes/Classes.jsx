@@ -79,6 +79,10 @@ const Classes = () => {
                 cartItem
             );
             console.log(response.data); // You can handle the response here
+            Swal.fire({
+                icon: "success",
+                title: "Class added to cart successfully",
+              });
         } catch (error) {
             console.error("Error adding item to cart:", error);
         }
@@ -123,7 +127,7 @@ const Classes = () => {
                                     <h5 className="card-title">
                                         Available Seats: {classData.availableSeats}
                                     </h5>
-                                    <h5 className="card-title">Price: {classData.price}</h5>
+                                    <h5 className="card-title">Price: ${classData.price}</h5>
 
                                     <Button
                                         variant="outline-danger my-3 text-white border-0 border-bottom"
@@ -133,7 +137,7 @@ const Classes = () => {
                                             (isAdmin || isInstructor)
                                         }
                                     >
-                                        Add to Cart
+                                        Select
                                     </Button>
 
 

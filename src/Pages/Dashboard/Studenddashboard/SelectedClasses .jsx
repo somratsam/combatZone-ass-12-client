@@ -42,7 +42,7 @@ const SelectedClasses = () => {
         My Selected Classes
       </h1>
       <Container>
-      <p className="text-center">Total Price: {totalPrice}</p>
+      <p className="text-center">Total Price: ${totalPrice}</p>
             <div className="text-center mb-3">
               <Link to="/dashboard/payment">
                 <Button variant="outline-primary">Pay</Button>
@@ -72,7 +72,7 @@ const SelectedClasses = () => {
                     <td>{classData.name}</td>
                     <td>{classData.instructorName}</td>
                     <td>{classData.classTimePeriod}</td>
-                    <td>{classData.price}</td>
+                    <td>${classData.price}</td>
                     
                     <td>
                       <Button variant="outline-danger" className="mr-2" onClick={() => handleDeleteClass(classData._id)}>

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@egjs/react-flicking": "^4.10.9",
+    "@emotion/react": "^11.11.1",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@stripe/react-stripe-js": "^2.1.0",
@@ -23,6 +24,7 @@
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
+    "react-awesome-reveal": "^4.2.3",
     "react-awesome-slider": "^4.1.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
