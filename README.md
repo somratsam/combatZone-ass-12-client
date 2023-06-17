@@ -33,4 +33,4 @@
 - Awesome react revel
 - Aos
 
-Live site link : 
+Live site link : https://pixel-perfect-c4436.web.app/
