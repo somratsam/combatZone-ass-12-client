@@ -26,7 +26,7 @@ const ClassesList = () => {
   const handleUpdateFeedback = async (classId, feedback) => {
     try {
       await axios.put(`http://localhost:5000/classes/${classId}`, { feedback });
-      // Update the classes state with the updated feedback
+      
       setClasses((prevClasses) =>
         prevClasses.map((classData) =>
           classData._id === classId ? { ...classData, feedback } : classData

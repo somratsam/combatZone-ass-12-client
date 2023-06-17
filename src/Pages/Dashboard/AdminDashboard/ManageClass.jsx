@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Container, Button, Row, Col, Modal, Form } from 'react-bootstrap';
 
-// import useAuth from '../../Shared/useAuth';
+
 import '../../Shared/Style.css';
 import useAxiosSecure from '../../Shared/useAxiosSecure';
 
@@ -12,7 +12,7 @@ const ManageClass = () => {
   const [feedback, setFeedback] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [axiosSecure] = useAxiosSecure();
-  // const { user } = useAuth();
+  
 
   useEffect(() => {
     const fetchClasses = async () => {
@@ -62,7 +62,7 @@ const ManageClass = () => {
         return classData;
       });
       setClasses(updatedClasses);
-      handleOpenFeedbackModal(classId); // Open feedback modal after denying the class
+      handleOpenFeedbackModal(classId); 
     } catch (error) {
       console.error('Error denying class:', error);
     }

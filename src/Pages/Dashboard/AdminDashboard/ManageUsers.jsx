@@ -47,13 +47,11 @@ const ManageUsers = () => {
 
   const makeAdmin = async (userId) => {
     try {
-      // Disable the button
+    
       setDisabledButtons((prevDisabledButtons) => [...prevDisabledButtons, userId]);
 
-      // Update the user role as admin in the backend API
-      await axios.patch(`http://localhost:5000/users/admin/${userId}`, { role: "admin" }); // Replace with your API endpoint for updating user role
-
-      // Update the user role in the local state
+      // Update the user role as admin 
+      await axios.patch(`http://localhost:5000/users/admin/${userId}`, { role: "admin" });
       setUsers((prevUsers) =>
         prevUsers.map((user) => {
           if (user._id === userId) {
