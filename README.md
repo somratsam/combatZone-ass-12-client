@@ -1,1 +1,9 @@
 - initial setup for my react application
+- Website Name : Combat zone
+- Create Responsive Header and banner
+- Create Home page to display the martial arts related data
+- Create popular classes section of martial arts school
+- Create clients feedback section about service
+- Create popular instructor section
+- Create responsive footer
+- Create login and registration page with validation

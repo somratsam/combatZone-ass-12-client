@@ -21,6 +21,7 @@ import Payment from "../Pages/Dashboard/Studenddashboard/Payments/Payment";
 import EnrolledClass from "../Pages/Dashboard/Studenddashboard/EnrolledClass";
 import PaymentHistory from "../Pages/Dashboard/Studenddashboard/PaymentHistory";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 
@@ -30,6 +31,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement : <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
