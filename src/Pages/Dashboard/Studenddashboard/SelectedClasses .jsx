@@ -25,7 +25,7 @@ const SelectedClasses = () => {
     const handleDeleteClass = async (classId) => {
         try {
             // Delete the selected class from the backend API
-            await axiosSecure.delete(`http://localhost:5000/selectedClasses/${classId}`);
+            await axiosSecure.delete(`https://pixel-perfact-server.vercel.app/selectedClasses/${classId}`);
 
             // Remove the deleted class from the local state
             setSelectedClasses((prevSelectedClasses) =>

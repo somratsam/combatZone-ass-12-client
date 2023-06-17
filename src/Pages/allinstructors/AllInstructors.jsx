@@ -9,7 +9,7 @@ const AllInstructors = () => {
   useEffect(() => {
     const fetchInstructors = async () => {
       try {
-        const response = await fetch('http://localhost:5000/AllInstructors');
+        const response = await fetch('https://pixel-perfact-server.vercel.app/AllInstructors');
         const data = await response.json();
         setInstructors(data);
       } catch (error) {

@@ -6,7 +6,7 @@ export const useFetchClasses = () => {
   useEffect(() => {
     const fetchClasses = async () => {
       try {
-        const response = await fetch('http://localhost:5000/classes');
+        const response = await fetch('https://pixel-perfact-server.vercel.app/classes');
         const data = await response.json();
         setClasses(data);
       } catch (error) {

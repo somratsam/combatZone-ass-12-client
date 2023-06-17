@@ -11,7 +11,7 @@ const PopularInstructors = () => {
   useEffect(() => {
     const fetchInstructors = async () => {
       try {
-        const response = await fetch('http://localhost:5000/instructors');
+        const response = await fetch('https://pixel-perfact-server.vercel.app/instructors');
         const data = await response.json();
         setInstructors(data);
       } catch (error) {

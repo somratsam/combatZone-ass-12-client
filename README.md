@@ -25,7 +25,7 @@
 - MONGODB
 - NODE JS
 - JWT
-- axious
+- Axios
 
 <!-- Animation package -->
 

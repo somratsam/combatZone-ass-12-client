@@ -10,7 +10,7 @@ const ClassesList = () => {
   useEffect(() => {
     const fetchClasses = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/myClasses?email=${user?.email}`);
+        const response = await axios.get(`https://pixel-perfact-server.vercel.app/myClasses?email=${user?.email}`);
         setClasses(response.data);
         console.log(response.data);
       } catch (error) {
@@ -25,7 +25,7 @@ const ClassesList = () => {
 
   const handleUpdateFeedback = async (classId, feedback) => {
     try {
-      await axios.put(`http://localhost:5000/classes/${classId}`, { feedback });
+      await axios.put(`https://pixel-perfact-server.vercel.app/classes/${classId}`, { feedback });
       
       setClasses((prevClasses) =>
         prevClasses.map((classData) =>

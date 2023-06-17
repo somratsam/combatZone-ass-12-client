@@ -39,7 +39,7 @@ const AddClass = () => {
   
     try {
      
-      const response = await axios.post('http://localhost:5000/classes', classData);
+      const response = await axios.post('https://pixel-perfact-server.vercel.app/classes', classData);
   
       
       console.log('Class added successfully:', response.data);

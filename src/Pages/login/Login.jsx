@@ -62,7 +62,7 @@ const Login = () => {
             
             setErrorMessage('');
             
-            fetch('http://localhost:5000/users', {
+            fetch('https://pixel-perfact-server.vercel.app/users', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

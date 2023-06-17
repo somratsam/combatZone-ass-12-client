@@ -24,7 +24,7 @@ const Classes = () => {
         // Fetch approved class data from MongoDB
         const fetchApprovedClasses = async () => {
             try {
-                const response = await fetch("http://localhost:5000/approveClasses");
+                const response = await fetch("https://pixel-perfact-server.vercel.app/approveClasses");
                 const data = await response.json();
                 setClasses(data);
             } catch (error) {
@@ -75,7 +75,7 @@ const Classes = () => {
 
             // Send the cart item data to the backend API
             const response = await axios.post(
-                "http://localhost:5000/carts",
+                "https://pixel-perfact-server.vercel.app/carts",
                 cartItem
             );
             console.log(response.data); // You can handle the response here

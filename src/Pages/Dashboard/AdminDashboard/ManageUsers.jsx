@@ -29,7 +29,7 @@ const ManageUsers = () => {
       setDisabledButtons((prevDisabledButtons) => [...prevDisabledButtons, userId]);
 
       // Update the user role as instructor in the backend API
-      await axios.patch(`http://localhost:5000/users/instructor/${userId}`, { role: "instructor" }); // Replace with your API endpoint for updating user role
+      await axios.patch(`https://pixel-perfact-server.vercel.app/users/instructor/${userId}`, { role: "instructor" }); // Replace with your API endpoint for updating user role
 
       // Update the user role in the local state
       setUsers((prevUsers) =>
@@ -51,7 +51,7 @@ const ManageUsers = () => {
       setDisabledButtons((prevDisabledButtons) => [...prevDisabledButtons, userId]);
 
       // Update the user role as admin 
-      await axios.patch(`http://localhost:5000/users/admin/${userId}`, { role: "admin" });
+      await axios.patch(`https://pixel-perfact-server.vercel.app/users/admin/${userId}`, { role: "admin" });
       setUsers((prevUsers) =>
         prevUsers.map((user) => {
           if (user._id === userId) {

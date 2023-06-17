@@ -88,7 +88,7 @@ const Registration = () => {
                 const createdUser = result.user;
                 updateProfile(createdUser, { displayName: name, photoURL: photo })
                     .then(() => {
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://pixel-perfact-server.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
