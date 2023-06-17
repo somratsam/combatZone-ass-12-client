@@ -88,7 +88,7 @@ const AuthProvider = ({ children }) => {
     setUserAndPhoto,
   };
 
-  console.log(user);
+  
 
   return (
     <AuthContext.Provider value={authInfo}>

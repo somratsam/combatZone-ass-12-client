@@ -29,7 +29,6 @@ const useFetchSelectedClasses = () => {
   }, [user, axiosSecure, loading]);
   
 
-  // Include setSelectedClasses in the return value
   return { selectedClasses, setSelectedClasses };
 };
 
