@@ -6,7 +6,7 @@ const AllInstructors = () => {
   const [AllInstructors, setInstructors] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => { 
     const fetchInstructors = async () => {
       try {
         const response = await fetch('https://pixel-perfact-server.vercel.app/AllInstructors');

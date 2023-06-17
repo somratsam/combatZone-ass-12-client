@@ -1,7 +1,8 @@
 
 import { Container } from 'react-bootstrap';
-import { useFetchClasses } from '../../../Shared/ClassFetch';
+
 import '../../../Shared/Style.css'
+import { useFetchClasses } from '../../../Shared/ClassFetch';
 
 const PopularClasses = () => {
   const classes = useFetchClasses();
